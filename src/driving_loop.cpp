@@ -4,7 +4,7 @@
 #include "machine_state.h"
 #include "buttons.h"
 
-void vDrivingLoop(void * pvParameters) {
+void v_driving_loop(void * pvParameters) {
 
   for(;;) { //if the counts are odd
     if(uc_button_left_flag % 2) {
