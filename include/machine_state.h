@@ -7,7 +7,6 @@
 #define NUM_INTERRUPTS
 
 extern uint16_t us_cursor_pos;
-extern states_t device_state;
 
 typedef enum states {
   HOME,
@@ -25,6 +24,8 @@ typedef enum states {
   SWITCH,
   PAUSE
 } states_t;
+
+extern states_t device_state;
 
 void v_handler_left_button(states_t state);
 void v_handler_center_button(states_t state);
