@@ -3,8 +3,8 @@
 #ifndef BUTTONS_H
 #define BUTTONS_H
 
-#define L_BUTTON_PIN 2
-#define C_BUTTON_PIN 3
+#define L_BUTTON_PIN 3
+#define C_BUTTON_PIN 2
 #define R_BUTTON_PIN 20
 
 #define NUM_BUTTONS 3

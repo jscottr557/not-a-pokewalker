@@ -2,7 +2,9 @@
 
 #include "buttons.h"
 
-uint8_t uc_button_vector[NUM_BUTTONS];
+uint8_t uc_button_left_flag;
+uint8_t uc_button_center_flag;
+uint8_t uc_button_right_flag;
 
 void v_enable_buttons() {
   attachInterrupt(digitalPinToInterrupt(L_BUTTON_PIN), v_left_ISR, RISING);

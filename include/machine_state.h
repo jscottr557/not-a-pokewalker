@@ -6,7 +6,7 @@
 #define NUM_MACHINE_STATES
 #define NUM_INTERRUPTS
 
-extern uint16_t us_cursor_pos;
+extern int8_t c_cursor_pos;
 
 typedef enum states {
   HOME,
