@@ -22,12 +22,12 @@ void v_disable_buttons() {
 
 
 void v_left_ISR() {
-  uc_button_left_flag |= 1; //if we're REALLY low on space we can move all of the interrupt flags to a combined bit string
+  uc_button_left_flag++; //if we're REALLY low on space we can move all of the interrupt flags to a combined bit string
   return;
 }
 
 void v_center_ISR() {
-  uc_button_center_flag |= 1;
+  uc_button_center_flag++;
   return;
 }
 

@@ -13,7 +13,6 @@ extern uint8_t uc_button_left_flag;
 extern uint8_t uc_button_center_flag;
 extern uint8_t uc_button_right_flag;
 
-
 void v_disable_buttons(); //kill the interrupts
 void v_enable_buttons(); //unkill the interrupts
 
