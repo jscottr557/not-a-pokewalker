@@ -14,6 +14,9 @@ uint32_t watts;
 uint8_t sound;
 uint8_t shade;
 
+uint8_t items_held;
+uint8_t mons_held;
+
 const char * state_to_string(states_t state) {
   const char * name_list[NUM_MACHINE_STATES];
 

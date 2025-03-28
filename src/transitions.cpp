@@ -1,6 +1,12 @@
 #include "transitions.h"
 #include "device_state.h"
 
+void v_simple_transition(uint8_t uc_cursor_start, states_t state) {
+  uc_cursor_position = uc_cursor_start;
+  primary_state = state;
+}
+
+
 void v_home_to_menu(uint8_t uc_cursor_start){
   uc_cursor_position = uc_cursor_start;
   primary_state = MENU;
@@ -66,6 +72,37 @@ void v_stats_to_card() {
   primary_state = CARD;
 }
 
+void v_settings_to_sound() {
+  uc_cursor_position = 0;
+  primary_state = SOUND;
+
+}
+
+void v_settings_to_shade() {
+  uc_cursor_position = 0;
+  primary_state = SHADE;
+}
+
+void v_settings_to_menu() {
+  uc_cursor_position = 5;
+  primary_state = MENU;
+}
+
+
+void v_shade_to_home() {
+  uc_cursor_position = 0;
+  primary_state = HOME;
+}
+
+void v_sound_to_home() {
+  uc_cursor_position = 0;
+  primary_state = HOME;
+}
+
+void v_inventory_to_home() {
+  uc_cursor_position = 0;
+  primary_state = HOME;
+}
 
 
 

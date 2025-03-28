@@ -1,9 +1,13 @@
 #include <stdint.h>
 
+#include "device_state.h"
+
 #ifndef TRANSITIONS_H
 #define TRANSITIONS_h
 
-void v_home_to_menu(uint8_t uc_cursor_position);
+void v_simple_transition(uint8_t uc_cursor_start, states_t state);
+
+void v_home_to_menu(uint8_t uc_cursor_start);
 
 void v_menu_to_home();
 void v_menu_to_radar();
@@ -19,4 +23,15 @@ void v_card_to_stats();
 
 void v_stats_to_home();
 void v_stats_to_card();
+
+void v_settings_to_sound();
+void v_settings_to_shade();
+void v_settings_to_menu();
+
+void v_sound_to_home();
+void v_shade_to_home();
+
+void v_inventory_to_home();
+
+
 #endif

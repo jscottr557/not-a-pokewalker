@@ -16,6 +16,13 @@ void v_handler_left_button(states_t state) {
     case STATS:
       if(uc_cursor_position == 0) {v_stats_to_card(); break;}
       uc_cursor_position--;
+    case SETTINGS:
+      if(uc_cursor_position < 0) {
+        uc_cursor_position--;
+        break;
+      }
+      v_settings_to_menu();
+      break;
     default:
       break;
   }
@@ -56,6 +63,27 @@ void v_handler_center_button(states_t state) {
     case STATS:
       v_stats_to_home();
       break;
+    case SETTINGS:
+      switch(uc_cursor_position) {
+        case 0:
+          v_settings_to_sound();
+          break;
+        case 1:
+          v_settings_to_shade();
+          break;
+      }
+      break;
+    case SOUND:
+      //save new sound setting
+      v_sound_to_home();
+      break;
+    case SHADE:
+      //save new shade setting
+      v_shade_to_home();
+      break;
+    case INVENTORY:
+      v_inventory_to_home();
+      break;
     default:
       //its so over
       break;
@@ -81,6 +109,12 @@ void v_handler_right_button(states_t state) {
       }
       //play an err sound
       break;
+    case SETTINGS:
+    if(uc_cursor_position < 1) {
+      uc_cursor_position++;
+      break;
+    }
+    break;
     default:
       break;
   }
