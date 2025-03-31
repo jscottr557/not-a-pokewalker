@@ -5,17 +5,12 @@ states_t primary_state = HOME;
 
 uint8_t uc_cursor_position;
 
+//if stats was a subroutine, these would live there. It isn't, so they don't
 uint32_t today_steps;
 uint32_t history_steps[7];
 uint32_t all_time_steps;
 uint32_t total_days;
 uint32_t watts;
-
-uint8_t sound;
-uint8_t shade;
-
-uint8_t items_held;
-uint8_t mons_held;
 
 const char * state_to_string(states_t state) {
   const char * name_list[NUM_MACHINE_STATES];

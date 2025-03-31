@@ -1,0 +1,14 @@
+Not a pokewalker project
+
+Goal: Reproduce the functionality of a pokewalker without splitting hairs
+
+Top level feature domains include:
+Logic
+Graphics
+Sound
+Comms
+EPROM
+The literal hardware configuration of the device
+
+If I were a better software engineer then this project wouldn't be organized like a bowl of spaghetti.
+Start in logic/driving_loop.cpp and follow the calls down the rabbit hole.

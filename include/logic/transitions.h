@@ -1,9 +1,15 @@
 #include <stdint.h>
 
 #include "device_state.h"
+#include "cursor_bounds.h"
 
 #ifndef TRANSITIONS_H
 #define TRANSITIONS_h
+
+#define TRANSITION_SIMPLE(cursor_start, state) { \
+																								uc_cursor_position = cursor_start;\
+																								primary_state = state;\
+																							 }
 
 void v_simple_transition(uint8_t uc_cursor_start, states_t state);
 

@@ -36,11 +36,4 @@ extern uint32_t all_time_steps;
 extern uint32_t total_days;
 extern uint32_t watts;
 
-extern uint8_t sound;
-extern uint8_t shade;
-
-extern uint8_t items_held;
-extern uint8_t mons_held;
-
-
 #endif
