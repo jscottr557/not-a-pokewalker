@@ -17,8 +17,19 @@ extern uint8_t shade;
 extern uint8_t items_held;
 extern uint8_t mons_held;
 
-subroutine_status_t ss_shade_step(button_t button_number);
-subroutine_status_t ss_sound_step(button_t button_number);
+subroutine_status_t ss_shade_step_left();
+subroutine_status_t ss_shade_step_center();
+subroutine_status_t ss_shade_step_right();
+
+subroutine_status_t ss_sound_step_left();
+subroutine_status_t ss_sound_step_center();
+subroutine_status_t ss_sound_step_right();
+
+subroutine_status_t ss_inventory_step_left();
+subroutine_status_t ss_inventory_step_center();
+subroutine_status_t ss_inventory_step_right();
+
+subroutine_status_t ss_comms();
 
 
 #endif

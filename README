@@ -24,3 +24,8 @@ What follows is a list of misc. rules and other possibly important facts
 		Return a subroutine_status_t notifying the state machine of progress
 
 	Idea behind invalid() is to notify of an invalid input: beep if volume up, flash the screen(?) otherwise
+
+	Interrupt "chain" in the following order:
+		Interrupt signal -> ISR -> driving loop -> respective handler -> state machine ->* subroutine step
+
+	Inventory cursor always starts at 0, will need to do some context calculations to determine what is selected

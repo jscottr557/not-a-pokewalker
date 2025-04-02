@@ -7,10 +7,6 @@
 #define C_BUTTON_PIN 2
 #define R_BUTTON_PIN 20
 
-#define BUTTON_LEFT 0
-#define BUTTON_RIGHT 1
-#define BUTTON_CENTER 2
-
 typedef uint8_t button_t;
 
 extern uint8_t uc_button_left_flag;

@@ -1,8 +1,9 @@
 #include "handlers.h"
 #include "transitions.h"
+#include "subroutines.h"
 
-void v_handler_left_button(states_t state) {
-  switch(state) {
+void v_handler_left_button() {
+  switch(primary_state) {
     case HOME:
       v_home_to_menu(CURSOR_MENU_HIGH);
       break;
@@ -21,6 +22,15 @@ void v_handler_left_button(states_t state) {
       if(uc_cursor_position > CURSOR_SETTINGS_LOW) {CURSOR_LEFT();}
       else{v_settings_to_menu();}
       break;
+		case SHADE:
+			(void) ss_shade_step_left();
+			break;
+		case SOUND:
+			(void) ss_sound_step_left();
+			break;
+		case INVENTORY:
+			if(ss_inventory_step_left() == SS_HALT) {v_inventory_to_home();}
+			break;
     default:
       break;
   }

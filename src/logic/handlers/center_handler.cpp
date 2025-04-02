@@ -3,8 +3,8 @@
 #include "buttons.h"
 #include "subroutines.h"
 
-void v_handler_center_button(states_t state) {
-	switch(state) {
+void v_handler_center_button() {
+	switch(primary_state) {
 		case HOME:
 			v_home_to_menu(CURSOR_MENU_COMMS);
 			break;
@@ -49,15 +49,16 @@ void v_handler_center_button(states_t state) {
 			}
 			break;
 		case SOUND:
-			(void) ss_sound_step(BUTTON_CENTER);
+			(void) ss_sound_step_center();
 			v_sound_to_home();
 			break;
 		case SHADE:
-			(void) ss_shade_step(BUTTON_CENTER);
+			(void) ss_shade_step_center();
 			v_shade_to_home();
 			break;
 		case INVENTORY:
-			v_inventory_to_home();
+			if(ss_inventory_step_center() == SS_HALT) { v_inventory_to_home(); }
+			else { /*?????????????????*/ } 
 			break;
 		default:
 			TRANSITION_SIMPLE(0, ERR);
