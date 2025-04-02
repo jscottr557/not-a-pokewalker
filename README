@@ -12,3 +12,15 @@ The literal hardware configuration of the device
 
 If I were a better software engineer then this project wouldn't be organized like a bowl of spaghetti.
 Start in logic/driving_loop.cpp and follow the calls down the rabbit hole.
+
+What follows is a list of misc. rules and other possibly important facts
+	Transitions:
+		Set up initial graphical environments
+		Change the device state and logical cursor position
+	Subroutines
+		"Update" graphics set up by transitions
+		Modify & save subroutine data (which may or may not change device behavior)
+		SHOULD NOT CONTAIN USER INTERACTIVE LOOPS (i.e. they must be "iterative", very probably local variables should be static)
+		Return a subroutine_status_t notifying the state machine of progress
+
+	Idea behind invalid() is to notify of an invalid input: beep if volume up, flash the screen(?) otherwise

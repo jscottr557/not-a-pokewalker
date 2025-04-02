@@ -11,7 +11,7 @@
 																								primary_state = state;\
 																							 }
 
-void v_simple_transition(uint8_t uc_cursor_start, states_t state);
+void v_simple_transition(uint8_t uc_cursor_start, states_t state); //deprecated over the macro, wastes a stack frame
 
 void v_home_to_menu(uint8_t uc_cursor_start);
 

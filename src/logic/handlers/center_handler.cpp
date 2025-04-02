@@ -1,5 +1,7 @@
 #include "handlers.h"
 #include "transitions.h"
+#include "buttons.h"
+#include "subroutines.h"
 
 void v_handler_center_button(states_t state) {
 	switch(state) {
@@ -47,18 +49,18 @@ void v_handler_center_button(states_t state) {
 			}
 			break;
 		case SOUND:
-			//save new sound setting
+			(void) ss_sound_step(BUTTON_CENTER);
 			v_sound_to_home();
 			break;
 		case SHADE:
-			//save new shade setting
+			(void) ss_shade_step(BUTTON_CENTER);
 			v_shade_to_home();
 			break;
 		case INVENTORY:
 			v_inventory_to_home();
 			break;
 		default:
-			//its so over
+			TRANSITION_SIMPLE(0, ERR);
 			break;
 	}
 }
