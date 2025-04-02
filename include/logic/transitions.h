@@ -38,6 +38,8 @@ void v_sound_to_home();
 void v_shade_to_home();
 
 void v_inventory_to_home();
+void v_inventory_to_menu();
+
 
 
 #endif

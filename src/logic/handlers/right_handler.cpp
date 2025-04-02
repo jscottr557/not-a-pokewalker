@@ -22,6 +22,7 @@ void v_handler_right_button() {
       break;
     case SETTINGS:
     	if(uc_cursor_position < CURSOR_SETTINGS_HIGH) {CURSOR_RIGHT();}
+			else {v_invalid();}
     	break;
 		case SHADE:
 			(void) ss_shade_step_right();

@@ -3,9 +3,10 @@
 #include "subroutines.h"
 #include "device_state.h"
 #include "cursor_bounds.h"
+#include "invalid.h"
 
-uint8_t items_held;
-uint8_t mons_held;
+uint8_t items_held = 2;
+uint8_t mons_held = 2;
 
 subroutine_status_t ss_inventory_step_left() {
 	if(uc_cursor_position > 0) {
@@ -28,6 +29,9 @@ subroutine_status_t ss_inventory_step_center() {
 subroutine_status_t ss_inventory_step_right() {
 	if(uc_cursor_position < (items_held + mons_held) - 1) {
 		CURSOR_RIGHT();
+	}
+	else {
+		v_invalid();
 	}
 
 	return SS_CONTINUE;

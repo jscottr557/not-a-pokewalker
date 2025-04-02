@@ -29,7 +29,7 @@ void v_handler_left_button() {
 			(void) ss_sound_step_left();
 			break;
 		case INVENTORY:
-			if(ss_inventory_step_left() == SS_HALT) {v_inventory_to_home();}
+			if(ss_inventory_step_left() == SS_HALT) {v_inventory_to_menu();}
 			break;
     default:
       break;
