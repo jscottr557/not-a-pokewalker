@@ -1,5 +1,4 @@
 #include "device_state.h"
-#include "buttons.h"
 
 states_t primary_state = HOME;
 

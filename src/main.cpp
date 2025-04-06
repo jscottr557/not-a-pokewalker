@@ -5,19 +5,18 @@
 #include "buttons.h"
 
 
-
 void setup() {
   Serial.begin(9600);
   while(!Serial){}
 
-  v_enable_buttons();
-  xTaskCreate(v_driving_loop, "driving loop", 256, NULL, 1, NULL);
+  xTaskCreate(v_driving_loop, "driving loop", 256, NULL, 1, &x_driving_loop_handle);
+	v_enable_buttons(); //if this were first bad memory access could result, see ISRs
+
 
   Serial.println("inited!");
 }
 
-//scheduler should start automatically
 
 void loop() {
-  
+  //scheduler starts automatically
 }

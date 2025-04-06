@@ -14,6 +14,7 @@ void v_handler_center_button() {
 					v_menu_to_radar();
 					break;
 				case CURSOR_MENU_DOWSING:
+					ss_dowsing_init();
 					v_menu_to_dowsing();
 					break;
 				case CURSOR_MENU_COMMS:
@@ -59,6 +60,9 @@ void v_handler_center_button() {
 		case INVENTORY:
 			if(ss_inventory_step_center() == SS_HALT) { v_inventory_to_home(); }
 			else { /*?????????????????*/ } 
+			break;
+		case DOWSING:
+			if(ss_dowsing_step_center() == SS_HALT) { v_dowsing_to_home(); }
 			break;
 		default:
 			TRANSITION_SIMPLE(0, ERR);

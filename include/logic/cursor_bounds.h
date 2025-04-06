@@ -22,4 +22,9 @@
 #define CURSOR_SETTINGS_LOW 0
 #define CURSOR_SETTINGS_HIGH 1
 
+#define CURSOR_DOWSING_LOW 0
+#define CURSOR_DOWSING_HIGH 5
+
+
+
 #endif

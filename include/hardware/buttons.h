@@ -7,11 +7,14 @@
 #define C_BUTTON_PIN 2
 #define R_BUTTON_PIN 20
 
+#define L_BUTTON 0
+#define R_BUTTON 1
+#define C_BUTTON 2
+#define NONE_BUTTON -1
+
 typedef uint8_t button_t;
 
-extern uint8_t uc_button_left_flag;
-extern uint8_t uc_button_center_flag;
-extern uint8_t uc_button_right_flag;
+extern uint8_t uc_which_button;
 
 void v_disable_buttons(); //kill the interrupt lines
 void v_enable_buttons(); //unkill the interrupt lines

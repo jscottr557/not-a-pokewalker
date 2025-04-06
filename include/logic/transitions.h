@@ -40,6 +40,8 @@ void v_shade_to_home();
 void v_inventory_to_home();
 void v_inventory_to_menu();
 
+void v_dowsing_to_home();
+
 
 
 #endif

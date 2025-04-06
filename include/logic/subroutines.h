@@ -29,6 +29,12 @@ subroutine_status_t ss_inventory_step_left();
 subroutine_status_t ss_inventory_step_center();
 subroutine_status_t ss_inventory_step_right();
 
+subroutine_status_t ss_dowsing_init();
+subroutine_status_t ss_dowsing_step_left();
+subroutine_status_t ss_dowsing_step_right();
+subroutine_status_t ss_dowsing_step_center();
+
+
 subroutine_status_t ss_comms();
 
 

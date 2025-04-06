@@ -1,10 +1,14 @@
 #include <stdint.h>
 
+#include <Arduino_FreeRTOS.h>
+
 #ifndef DEVICE_STATE_H
 #define DEVICE_STATE_H
 
 #define NUM_MACHINE_STATES 15
 #define NUM_INTERRUPTS
+
+extern TaskHandle_t x_driving_loop_handle;
 
 typedef enum primary_states {
   HOME,

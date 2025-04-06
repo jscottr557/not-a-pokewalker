@@ -33,6 +33,9 @@ void v_handler_right_button() {
 		case INVENTORY:
 			(void) ss_inventory_step_right();
 			break;
+		case DOWSING:
+			(void) ss_dowsing_step_right();
+			break;
     default:
       break;
   }

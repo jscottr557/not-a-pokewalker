@@ -31,6 +31,9 @@ void v_handler_left_button() {
 		case INVENTORY:
 			if(ss_inventory_step_left() == SS_HALT) {v_inventory_to_menu();}
 			break;
+		case DOWSING:
+			(void) ss_dowsing_step_left();
+			break;
     default:
       break;
   }
