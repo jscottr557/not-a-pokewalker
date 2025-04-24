@@ -36,6 +36,9 @@ void v_handler_right_button() {
 		case DOWSING:
 			(void) ss_dowsing_step_right();
 			break;
+		case RADAR:
+			if(ss_inventory_step_right() == SS_HALT) {v_radar_to_home();}
+			break;
     default:
       break;
   }

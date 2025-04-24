@@ -25,6 +25,8 @@
 #define CURSOR_DOWSING_LOW 0
 #define CURSOR_DOWSING_HIGH 5
 
+#define CURSOR_RADAR_LOW 0
+#define CURSOR_RADAR_HIGH 3
 
 
 #endif

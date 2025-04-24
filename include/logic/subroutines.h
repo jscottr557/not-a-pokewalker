@@ -34,6 +34,15 @@ subroutine_status_t ss_dowsing_step_left();
 subroutine_status_t ss_dowsing_step_right();
 subroutine_status_t ss_dowsing_step_center();
 
+subroutine_status_t ss_radar_init();
+subroutine_status_t ss_radar_step_left();
+subroutine_status_t ss_radar_step_right();
+subroutine_status_t ss_radar_step_center();
+
+subroutine_status_t ss_battle_init();
+subroutine_status_t ss_battle_step_left();
+subroutine_status_t ss_battle_step_right();
+subroutine_status_t ss_battle_step_center();
 
 subroutine_status_t ss_comms();
 

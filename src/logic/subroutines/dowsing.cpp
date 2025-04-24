@@ -48,6 +48,7 @@ subroutine_status_t ss_dowsing_step_center() {
 	
 	if(uc_guesses_count == STARTING_GUESSES) { //out of guesses
 		//TODO: sad ding
+		//TODO: draw item
 		Serial.println(uc_item_index); //FOR DEBUGGING ONLY, REMOVE WHEN DONE
 		v_block_with_prompt("out of guesses :(");
 		uc_guesses_count = 0;
@@ -58,10 +59,7 @@ subroutine_status_t ss_dowsing_step_center() {
 	uint8_t uc_distance_to_item = uc_item_index - uc_cursor_position;
 	if(uc_distance_to_item < 0) uc_distance_to_item *= -1;
 
-	/* TODO
-	 * sad ding
-	*/
-
+	//TODO: sad ding
 	v_block_with_prompt("miss!");
 
 	if(uc_distance_to_item == 1) {
@@ -71,12 +69,10 @@ subroutine_status_t ss_dowsing_step_center() {
 		v_block_with_prompt("It's far away...");
 	}
 
-
-
 	return SS_CONTINUE;
 }
 
 subroutine_status_t ss_dowsing_init() {
-	uc_item_index = rand() % (CURSOR_DOWSING_HIGH + 1); //between CURSOR_DOWSING_LOW & CURSOR_DOWSING_HIGH... (not uniformly distributed?)
+	uc_item_index = rand() % (CURSOR_DOWSING_HIGH + 1); //between CURSOR_DOWSING_LOW & CURSOR_DOWSING_HIGH... (not uniformly distributed)
 	return SS_CONTINUE;
 }

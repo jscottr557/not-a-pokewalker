@@ -11,6 +11,7 @@ void v_handler_center_button() {
 		case MENU:
 			switch(uc_cursor_position) {
 				case CURSOR_MENU_RADAR:
+					ss_radar_init();
 					v_menu_to_radar();
 					break;
 				case CURSOR_MENU_DOWSING:
@@ -63,6 +64,9 @@ void v_handler_center_button() {
 			break;
 		case DOWSING:
 			if(ss_dowsing_step_center() == SS_HALT) { v_dowsing_to_home(); }
+			break;
+		case RADAR:
+			if(ss_radar_step_center() == SS_HALT) { v_radar_to_home(); }
 			break;
 		default:
 			TRANSITION_SIMPLE(0, ERR);
