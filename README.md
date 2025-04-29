@@ -1,19 +1,23 @@
 # Not a pokewalker project
 
 ## Goal
+
 Reproduce the functionality of a pokewalker without splitting hairs
 
 Based off of the work of https://dmitry.gr/?r=05.Projects&proj=28.%20pokewalker
 
+The pokewalker is, at its most basic,  an overgrown pedometer. A user can "upload" a pokemon from the companion games, and take it on a "walk", or return it from the walker to the game. Walking earns points, which can be used to play minigames and earn up to 3 additional pokemon and items each. 
+
 ## Top level feature domains
-Logic
-Graphics
-Sound
-Comms
-EPROM
+Logic \
+Graphics \
+Sound \
+Comms \
+EPROM \
 The literal hardware configuration of the device
 
 ## Programmers Guide
+
 If I were a better software engineer then this project wouldn't be organized like a bowl of spaghetti. Start in logic/driving_loop.cpp and follow the calls down the rabbit hole. 
 
 Interrupts "call" in the following order:
