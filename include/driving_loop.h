@@ -3,6 +3,6 @@
 
 extern TaskHandle_t x_driving_loop_handle;
 
-void v_driving_loop(void * pvParameters);
+void v_driving_loop(void *pvParameters);
 
 #endif

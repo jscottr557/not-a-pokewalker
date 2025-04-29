@@ -3,7 +3,7 @@
 
 #include "driving_loop.h"
 #include "buttons.h"
-#include "test.h"
+#include "graphics_core.h"
 
 
 void setup() {
@@ -11,7 +11,9 @@ void setup() {
   while(!Serial){}
 
   xTaskCreate(v_driving_loop, "driving loop", 512, NULL, 1, &x_driving_loop_handle);
-	v_enable_buttons(); //if this were first bad memory access could result, see ISRs
+	v_enable_buttons();
+
+	graphics_init();
 
   Serial.println("inited!");
 }

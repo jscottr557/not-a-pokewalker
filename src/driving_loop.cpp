@@ -41,9 +41,7 @@ void v_driving_loop(void *pvParameters) {
 			default:
 				//????
 				break;
-		}
-		
+		}		
 		uc_which_button = NONE_BUTTON;
-		print_state();
   }
 }
