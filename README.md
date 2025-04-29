@@ -18,6 +18,8 @@ The literal hardware configuration of the device
 
 ## Programmers Guide
 
+![alt text](https://github.com/[jscottr557@gmail.com]/[not-a-pokewalker]/blob/[master]/Pokewalker.drawio_4.png?raw=true)
+
 If I were a better software engineer then this project wouldn't be organized like a bowl of spaghetti. Start in logic/driving_loop.cpp and follow the calls down the rabbit hole. 
 
 Interrupts "call" in the following order:
