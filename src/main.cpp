@@ -10,7 +10,7 @@ void setup() {
   Serial.begin(9600);
   while(!Serial){}
 
-  xTaskCreate(v_driving_loop, "driving loop", 512, NULL, 1, &x_driving_loop_handle);
+  xTaskCreate(v_driving_loop, "driving loop", 1024, NULL, 1, &x_driving_loop_handle);
 	v_enable_buttons();
 
 	graphics_init();

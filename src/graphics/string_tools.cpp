@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdint.h>
-
+#include <string.h> 
 #include "string_tools.h"
 
 char *make_filled_string(char fill, uint32_t total_size) {

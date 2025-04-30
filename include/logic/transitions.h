@@ -44,5 +44,7 @@ void v_dowsing_to_home();
 
 void v_radar_to_home();
 
+void v_comms_to_home();
+
 
 #endif

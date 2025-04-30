@@ -68,6 +68,9 @@ void v_handler_center_button() {
 		case RADAR:
 			if(ss_radar_step_center() == SS_HALT) { v_radar_to_home(); }
 			break;
+		case COMMS:
+			v_comms_to_home(); //PLACEHOLDER, TODO
+			break;
 		default:
 			TRANSITION_SIMPLE(0, ERR);
 			break;

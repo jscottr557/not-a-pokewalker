@@ -6,7 +6,8 @@
 #include "device_state.h"
 #include "buttons.h"
 #include "handlers.h"
-
+#include "graphics_core.h"
+#include "cursor_bounds.h"
 
 static void print_state() {
   Serial.print("device state: ");
@@ -22,6 +23,8 @@ void v_driving_loop(void *pvParameters) {
 	
 	xTaskNotifyStateClear(NULL); //clear any notifications just in case
 	ulTaskNotifyValueClear(NULL, UINT32_MAX);
+
+	draw_state(state_to_string(primary_state));
 
   for(;;) {
 
@@ -43,5 +46,13 @@ void v_driving_loop(void *pvParameters) {
 				break;
 		}		
 		uc_which_button = NONE_BUTTON;
+
+		print_state();
+
+		draw_cursor(uc_cursor_position);
   }
+
+	
+	
+	
 }

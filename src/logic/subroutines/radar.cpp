@@ -73,7 +73,7 @@ subroutine_status_t ss_radar_step_center() {
 
 	if(uc_check_for_miss()) {
 		vTaskDelete(x_alert_handle); //stop the alert generator
-		vSemaphoreDelete(sh_alert_lock); //since we've deleted the other code that messes with c_alert_index, we can safely delete
+		vSemaphoreDelete(sh_alert_lock); //since we've deleted the other task that messes with c_alert_index, we can safely delete
 
 		switch(c_alert_index) {
 			case EARLY:
@@ -120,13 +120,13 @@ void v_alert_generator(void *param) {
 	uc_ms_to_wait = ((rand() % (MAX_MS - 1000)) + MIN_MS);
 	vTaskDelay(pdMS_TO_TICKS(uc_ms_to_wait));
 
-	//undraw the alert
+	//TODO: undraw the alert
 
 	xSemaphoreTake(sh_alert_lock, portMAX_DELAY);
 	c_alert_index = LATE;
 	xSemaphoreGive(sh_alert_lock);
 
-	v_block_with_prompt("it got away...");
+	v_block_with_prompt("it got away..."); //this is never actually unblocked, gets nuked when v_taskDelete'd
 }
 
 uint8_t uc_check_for_miss() {

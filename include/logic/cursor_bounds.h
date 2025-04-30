@@ -6,6 +6,8 @@
 #define CURSOR_UP() (uc_cursor_position++)
 #define CURSOR_DOWN() (uc_cursor_position--)
 
+#define CURSOR_NO_SEL 255
+
 #define CURSOR_MENU_LOW 0
 #define CURSOR_MENU_HIGH 5
 
@@ -27,6 +29,12 @@
 
 #define CURSOR_RADAR_LOW 0
 #define CURSOR_RADAR_HIGH 3
+
+#define CURSOR_SHADE_HIGH 9 
+#define CURSOR_SHADE_LOW 0
+
+#define CURSOR_SOUND_HIGH 2 
+#define CURSOR_SOUND_LOW 0
 
 
 #endif

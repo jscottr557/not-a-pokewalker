@@ -6,14 +6,11 @@
 #define SPI_PORT SPI
 #define SPI_SPEED 32000000 
 
-#define CHAR_LINE_WIDTH 0 
+#define NUM_CHARS_PER_LINE 21 
 
 void graphics_init();
 
 //as a rule, try not to use globals in these functions
-
-
-
 void draw_state(const char *state_name);
 
 void draw_options(uint8_t num_options);
