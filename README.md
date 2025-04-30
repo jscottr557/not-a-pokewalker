@@ -18,7 +18,7 @@ The literal hardware configuration of the device
 
 ## Programmers Guide
 
-![](https://github.com/jscottr557/not-a-pokewalker/blob/master/Pokewalker.drawio_4.png)
+![](https://github.com/jscottr557/not-a-pokewalker/blob/master/docs/Pokewalker.drawio_4.png)
 
 If I were a better software engineer then this project wouldn't be organized like a bowl of spaghetti. Start in logic/driving_loop.cpp and follow the calls down the rabbit hole. 
 
