@@ -11,7 +11,7 @@ uint32_t all_time_steps;
 uint32_t total_days;
 uint32_t watts;
 
-const char * state_to_string(states_t state) {
+const char *state_to_string(states_t state) {
   const char * name_list[NUM_MACHINE_STATES];
 
   name_list[0] = "home";

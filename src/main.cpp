@@ -8,7 +8,7 @@
 
 void setup() {
   Serial.begin(9600);
-  while(!Serial){}
+  while(!Serial){} //Wait for the usb serial
 
   xTaskCreate(v_driving_loop, "driving loop", 1024, NULL, 1, &x_driving_loop_handle);
 	v_enable_buttons();

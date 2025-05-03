@@ -8,10 +8,18 @@
 
 #define NUM_CHARS_PER_LINE 21 
 
+extern KWH018ST01_4WSPI display;
+
+extern wind_info_t state_window;
+extern wind_info_t option_window;
+extern wind_info_t cursor_window;
+
 void graphics_init();
+void clear_window(wind_info_t *window_to_clear);
 
-//as a rule, try not to use globals in these functions
-void draw_state(const char *state_name);
+/* printing functions */
+void draw_state(const char *state_name); //Draws the given state in pre-defined state window
+void draw_options(uint8_t num_options); //Draws specified number of "#s" in pre-defined option window
+void draw_cursor(uint8_t cursor_position); //Draws "*"(the cursor) in pre-defined cursor window. position is an option index, not a pixel position
+/*                    */
 
-void draw_options(uint8_t num_options);
-void draw_cursor(uint8_t cursor_position);

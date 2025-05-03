@@ -1,4 +1,3 @@
-#include <Arduino.h>
 #include <Arduino_FreeRTOS.h>
 #include <stdlib.h>
 #include <time.h>
@@ -8,13 +7,6 @@
 #include "handlers.h"
 #include "graphics_core.h"
 #include "cursor_bounds.h"
-
-static void print_state() {
-  Serial.print("device state: ");
-  Serial.println(state_to_string(primary_state));
-  Serial.print("cursor pos: ");
-  Serial.println(uc_cursor_position);
-}
 
 TaskHandle_t x_driving_loop_handle;
 
@@ -47,9 +39,12 @@ void v_driving_loop(void *pvParameters) {
 		}		
 		uc_which_button = NONE_BUTTON;
 
-		print_state();
-
-		draw_cursor(uc_cursor_position);
+		if(uc_cursor_position == CURSOR_NO_SEL) {
+			clear_cursor_window();
+		}
+		else {
+			draw_cursor(uc_cursor_position);
+		}
   }
 
 	
