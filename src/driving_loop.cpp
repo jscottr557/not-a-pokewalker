@@ -8,6 +8,7 @@
 #include "graphics_core.h"
 #include "cursor_bounds.h"
 
+
 TaskHandle_t x_driving_loop_handle;
 
 void v_driving_loop(void *pvParameters) {
@@ -40,7 +41,7 @@ void v_driving_loop(void *pvParameters) {
 		uc_which_button = NONE_BUTTON;
 
 		if(uc_cursor_position == CURSOR_NO_SEL) {
-			clear_cursor_window();
+			clear_window(&cursor_window);
 		}
 		else {
 			draw_cursor(uc_cursor_position);

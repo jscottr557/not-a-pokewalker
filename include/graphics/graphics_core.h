@@ -14,6 +14,9 @@ extern wind_info_t state_window;
 extern wind_info_t option_window;
 extern wind_info_t cursor_window;
 
+extern ILI9163C_color_18_t color_white;
+extern ILI9163C_color_18_t color_black;
+
 void graphics_init();
 void clear_window(wind_info_t *window_to_clear);
 

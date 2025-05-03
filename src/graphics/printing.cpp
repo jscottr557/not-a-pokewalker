@@ -1,4 +1,5 @@
 #include "graphics_core.h"
+#include "string_tools.h"
 
 static uint8_t option_indexes[NUM_CHARS_PER_LINE];
 

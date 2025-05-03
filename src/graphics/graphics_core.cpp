@@ -52,7 +52,7 @@ void graphics_init() {
 	color_black = (display.rgbTo18b( 0, 0, 0 ));
 }
 
-clear_window(wind_info_t *window_to_clear) {
+void clear_window(wind_info_t *window_to_clear) {
 	display.pCurrentWindow = window_to_clear;
 	display.fillWindow((color_t) &color_black);
 }
