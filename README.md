@@ -43,3 +43,5 @@ What follows is a list of misc. rules and other possibly important facts
 	Inventory cursor always starts at 0, will need to do some context calculations to determine what is selected
 
 Realistically speaking, a better way to architect this project is to treat each handler like a task, that way blocking with a prompt can be more atomic rather than device wide, but im too lazy to re implement and I'm just going to hack it together for now
+
+If you'd like HyperDisplay to stop throwing warnings at you so you can actually see your mistakes, delete the "#warning" in HyperDisplay.h and use #pragmas to control diagnostic behavior in HyperDisplay_ILI9163C.cpp (see https://stackoverflow.com/questions/3378560/how-to-disable-gcc-warnings-for-a-few-lines-of-code)
